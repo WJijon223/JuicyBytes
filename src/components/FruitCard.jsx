@@ -1,1 +1,3 @@
-export default function FruitCard() {}
+export default function FruitCard() {
+  return <div></div>;
+}

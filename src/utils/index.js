@@ -57,7 +57,8 @@ export const getFullFruitNumber = (fruit) => {
   if (fruitIndex === -1) {
     return null;
   }
-  return fruitIndex + 1;
+  const zeroes = "0".repeat(2 - String(fruitIndex + 1).length);
+  return `${zeroes}${fruitIndex + 1}`;
 };
 
 // retrieves the image path for a given fruit

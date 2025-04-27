@@ -10,8 +10,11 @@ function App() {
   return (
     <>
       <Header />
-      <div className="flex">
-        <SideBar />
+      <div className="main-container">
+        <SideBar
+          selectedFruit={selectedFruit}
+          setSelectedFruit={setSelectedFruit}
+        />
         <FruitCard />
       </div>
     </>
