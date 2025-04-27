@@ -1,6 +1,6 @@
 // List of fruits with their full names and numbers
 // This list is used to map fruit names to their full names and numbers
-const fruits = [
+export const fruits = [
   "Banana",
   "Orange",
   "Strawberry",
@@ -52,10 +52,19 @@ const fruits = [
   "Ceylon Gooseberry",
 ];
 
-const getFullFruitNumber = (fruit) => {
+export const getFullFruitNumber = (fruit) => {
   const fruitIndex = fruits.indexOf(fruit);
   if (fruitIndex === -1) {
     return null;
   }
   return fruitIndex + 1;
+};
+
+// retrieves the image path for a given fruit
+export const getImgPath = (fruit) => {
+  const fullFruitNumber = getFullFruitNumber(fruit);
+  if (fullFruitNumber === null) {
+    return null;
+  }
+  return `/images/${fullFruitNumber}.png`;
 };
