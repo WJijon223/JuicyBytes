@@ -1,0 +1,61 @@
+// List of fruits with their full names and numbers
+// This list is used to map fruit names to their full names and numbers
+const fruits = [
+  "Banana",
+  "Orange",
+  "Strawberry",
+  "Pear",
+  "Tomato",
+  "Apple",
+  "Cherry",
+  "Pineapple",
+  "Raspberry",
+  "Watermelon",
+  "Lemon",
+  "Mango",
+  "Blueberry",
+  "Apricot",
+  "Guava",
+  "Melon",
+  "Papaya",
+  "Lime",
+  "Persimmon",
+  "Durian",
+  "Blackberry",
+  "Lingonberry",
+  "Kiwi",
+  "Lychee",
+  "Fig",
+  "Gooseberry",
+  "PassionFruit",
+  "Plum",
+  "GreenApple",
+  "Feijoa",
+  "Tangerine",
+  "Pitahaya",
+  "Pomegranate",
+  "Dragonfruit",
+  "Grape",
+  "Morus",
+  "Avocado",
+  "Kiwifruit",
+  "Peach",
+  "Cranberry",
+  "Jackfruit",
+  "Horned Melon",
+  "Hazelnut",
+  "Pomelo",
+  "Mangosteen",
+  "Pumpkin",
+  "Japanese Persimmon",
+  "Annona",
+  "Ceylon Gooseberry",
+];
+
+const getFullFruitNumber = (fruit) => {
+  const fruitIndex = fruits.indexOf(fruit);
+  if (fruitIndex === -1) {
+    return null;
+  }
+  return fruitIndex + 1;
+};
