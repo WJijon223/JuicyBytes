@@ -15,7 +15,7 @@ function App() {
           selectedFruit={selectedFruit}
           setSelectedFruit={setSelectedFruit}
         />
-        <FruitCard />
+        <FruitCard selectedFruit={selectedFruit} />
       </div>
     </>
   );

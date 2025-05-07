@@ -6,7 +6,7 @@ export default function SideBar(props) {
 
   return (
     <div className="flex flex-col gap-2 p-3">
-      <h1 className="text-5xl font-bold text-sky-600">🌴Juicy Bytes</h1>
+      <h1 className="text-4xl font-bold text-sky-600">🌴Juicy Bytes</h1>
       <input
         type="text"
         className="p-2 border-2"
