@@ -16,7 +16,7 @@ export default function SideBar(props) {
         return (
           <button
             className={
-              "flex border-2 rounded hover:bg-orange-300 hover:text-white transition-colors duration-400 " +
+              "cursor-pointer flex border-2 rounded hover:bg-orange-300 hover:text-white transition-colors duration-400 " +
               (selectedFruit === fruitIndex ? "bg-orange-300 text-white" : "")
             }
             onClick={() => setSelectedFruit(fruitIndex)}
