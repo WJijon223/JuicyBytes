@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { fruits, getFullFruitNumber } from "../utils";
 
 export default function FruitCard(props) {
-  const { selectedFruit } = props;
+  const { selectedFruit = 0 } = props;
   const [loading, setLoading] = useState(false);
   const [fruitData, setFruitData] = useState(null);
 
@@ -49,19 +49,21 @@ export default function FruitCard(props) {
     fetchFruitData();
   }, [selectedFruit]);
 
-  async function getFruitData() {
-    const url = "https://www.fruityvice.com/api/fruit/";
-  }
-
   return (
     <div className="flex flex-col object-center justify-center items-center gap-2 m-10 p-3 border-2 rounded-lg bg-orange-100">
       <div className="text-4xl">{fruits[selectedFruit]}</div>
       <div className="flex flex-row">
-        <div>Image will go here</div>
+        <div>
+          <img
+            src={"/fruit/" + getFullFruitNumber(fruits[selectedFruit]) + ".png"}
+            alt="default-img"
+            className="w-64 h-64 object-cover rounded-lg shadow-lg"
+          />
+        </div>
         <div className="flex flex-col gap-2 p-3">
-          <div className="text-lg">Family: {fruitData.family}</div>
-          <div className="text-lg">Order: {fruitData.order}</div>
-          <div className="text-lg">Genus: {fruitData.genus}</div>
+          <div className="text-lg">Family: {fruitData?.family}</div>
+          <div className="text-lg">Order: {fruitData?.order}</div>
+          <div className="text-lg">Genus: {fruitData?.genus}</div>
           <button className="mx-auto border-2 rounded p-1 hover:bg-amber-50 transition-colors duration-300 cursor-pointer">
             Nutrition Facts
           </button>
