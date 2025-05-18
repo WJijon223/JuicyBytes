@@ -23,7 +23,6 @@ export const fruits = [
   "Durian",
   "Blackberry",
   "Lingonberry",
-  "Kiwi",
   "Lychee",
   "Fig",
   "Gooseberry",
@@ -32,7 +31,6 @@ export const fruits = [
   "GreenApple",
   "Feijoa",
   "Tangerine",
-  "Pitahaya",
   "Pomegranate",
   "Dragonfruit",
   "Grape",
@@ -47,9 +45,7 @@ export const fruits = [
   "Pomelo",
   "Mangosteen",
   "Pumpkin",
-  "Japanese Persimmon",
   "Annona",
-  "Ceylon Gooseberry",
 ];
 
 export const getFullFruitNumber = (fruit) => {

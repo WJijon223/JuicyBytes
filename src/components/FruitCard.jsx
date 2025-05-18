@@ -30,7 +30,9 @@ export default function FruitCard(props) {
         const noSpaces = fruits[selectedFruit]
           .replace(/\s+/g, "")
           .toLowerCase();
-        const url = "/api/fruit/" + noSpaces; // Use the proxy URL
+        const url =
+          "/api/fruit/" +
+          (fruits[selectedFruit] === "GreenApple" ? "72" : noSpaces); // Use the proxy URL
 
         fetch(url)
           .then((res) => res.json())
