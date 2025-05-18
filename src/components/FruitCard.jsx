@@ -53,7 +53,9 @@ export default function FruitCard(props) {
 
   return (
     <div className="flex flex-col object-center justify-center items-center gap-2 m-10 p-3 border-2 rounded-lg bg-orange-100">
-      <div className="text-4xl">{fruits[selectedFruit]}</div>
+      <div className="text-4xl">
+        {fruits[selectedFruit].replace(/([a-z])([A-Z])/g, "$1 $2")}
+      </div>
       <div className="flex flex-row">
         <div>
           <img
