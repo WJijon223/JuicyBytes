@@ -22,7 +22,7 @@ Juicy Bytes is a React + Vite web app for exploring fruits and their nutritional
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/WJijon223/JuicyBytes.git
+   git clone <your-repo-url>
    cd JuicyBytes
    ```
 
