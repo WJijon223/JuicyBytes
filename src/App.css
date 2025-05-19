@@ -18,14 +18,19 @@ body {
 }
 
 .main-container > :first-child {
-  flex: 0 0 30%; /* Sidebar takes 30% of the width */
+  flex: 0 0 30%;
+  height: 100vh;
+  overflow-y: auto; 
+  position: relative;
+  z-index: 1;
 }
 
 .main-container > :last-child {
-  flex: 1; /* FruitCard takes the remaining 70% */
-  position: fixed; /* Fix the last child to the viewport */
-  top: 0; /* Align it to the top of the viewport */
-  right: 0; /* Align it to the right of the viewport */
-  bottom: 0; /* Align it to the bottom of the viewport */
-  left: 30%; /* Align it to the left of the sidebar */
+  flex: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 30%;
+  overflow: hidden;
 }
