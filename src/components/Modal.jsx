@@ -21,7 +21,7 @@ export default function Modal(props) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white p-8 rounded shadow-lg w-96 max-w-full flex flex-col juistify-center items-center rounded-lg"
+        className="bg-amber-50 p-8 rounded shadow-lg w-96 max-w-full flex flex-col juistify-center items-center rounded-lg"
       >
         <h1 className="text-2xl mb-2">Nutrition Calculator</h1>
         <div className="flex flex-row justify-center gap-2">
@@ -32,6 +32,7 @@ export default function Modal(props) {
             ref={inputRef}
           />
           <button
+            className="hover:bg-orange-300 duration-400 rounded-lg px-2 border-2"
             onClick={() => {
               handleAmountChange();
             }}
