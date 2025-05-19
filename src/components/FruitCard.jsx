@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fruits, getFullFruitNumber } from "../utils";
+import { fruits, getFullFruitNumber, getImgPath } from "../utils";
 import Modal from "./Modal";
 
 export default function FruitCard(props) {
@@ -75,7 +75,7 @@ export default function FruitCard(props) {
       <div className="flex flex-row">
         <div>
           <img
-            src={"/fruit/" + getFullFruitNumber(fruits[selectedFruit]) + ".png"}
+            src={getImgPath(fruits[selectedFruit])}
             alt="default-img"
             className="w-64 h-64 object-cover rounded-lg shadow-lg"
           />

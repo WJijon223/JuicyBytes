@@ -63,5 +63,5 @@ export const getImgPath = (fruit) => {
   if (fullFruitNumber === null) {
     return null;
   }
-  return `/images/${fullFruitNumber}.png`;
+  return `/fruit/${fullFruitNumber}.png`;
 };
