@@ -1,10 +1,18 @@
 import { useEffect, useState } from "react";
 import { fruits, getFullFruitNumber } from "../utils";
+import Modal from "./Modal";
 
 export default function FruitCard(props) {
   const { selectedFruit = 0 } = props;
   const [loading, setLoading] = useState(false);
   const [fruitData, setFruitData] = useState(null);
+  const [modal, setModal] = useState(false);
+  const [amount, setAmount] = useState(100);
+
+  function handleCloseModal() {
+    setModal(false);
+    setAmount(100);
+  }
 
   useEffect(() => {
     // check if loading or localStorage is not available
@@ -53,6 +61,14 @@ export default function FruitCard(props) {
 
   return (
     <div className="flex flex-col object-center justify-center items-center gap-2 m-10 p-3 border-2 rounded-lg bg-orange-100">
+      {modal && (
+        <Modal
+          handleCloseModal={() => handleCloseModal()}
+          nutritions={fruitData?.nutritions}
+          amount={amount}
+          setAmount={setAmount}
+        />
+      )}
       <div className="text-4xl">
         {fruits[selectedFruit].replace(/([a-z])([A-Z])/g, "$1 $2")}
       </div>
@@ -68,8 +84,13 @@ export default function FruitCard(props) {
           <div className="text-lg">Family: {fruitData?.family}</div>
           <div className="text-lg">Order: {fruitData?.order}</div>
           <div className="text-lg">Genus: {fruitData?.genus}</div>
-          <button className="mx-auto border-2 rounded p-1 hover:bg-amber-50 transition-colors duration-300 cursor-pointer">
-            Nutrition Facts
+          <button
+            onClick={() => {
+              setModal(true);
+            }}
+            className="mx-auto border-2 rounded p-1 hover:bg-amber-50 transition-colors duration-300 cursor-pointer"
+          >
+            Nutrition Calculator
           </button>
         </div>
       </div>
