@@ -17,7 +17,7 @@ export default function SideBar(props) {
       <h1 className="text-4xl font-bold text-sky-600">🌴Juicy Bytes</h1>
       <input
         type="text"
-        className="p-2 border-2"
+        className="p-2 border-2 text-lg"
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
         placeholder="Type Name or Number"
