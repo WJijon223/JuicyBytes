@@ -26,7 +26,7 @@ export default function SideBar(props) {
         return (
           <button
             className={
-              "cursor-pointer flex border-2 rounded hover:bg-orange-300 hover:text-white transition-colors duration-400 " +
+              "cursor-pointer text-xl flex border-2 rounded hover:bg-orange-300 hover:text-white transition-colors duration-400 " +
               (selectedFruit === fruits.indexOf(fruit)
                 ? "bg-orange-300 text-white"
                 : "")

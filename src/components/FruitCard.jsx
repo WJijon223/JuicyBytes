@@ -69,7 +69,7 @@ export default function FruitCard(props) {
           setAmount={setAmount}
         />
       )}
-      <div className="text-4xl">
+      <div className="text-5xl">
         {fruits[selectedFruit].replace(/([a-z])([A-Z])/g, "$1 $2")}
       </div>
       <div className="flex flex-row">
@@ -81,9 +81,9 @@ export default function FruitCard(props) {
           />
         </div>
         <div className="flex flex-col gap-2 p-3">
-          <div className="text-lg">Family: {fruitData?.family}</div>
-          <div className="text-lg">Order: {fruitData?.order}</div>
-          <div className="text-lg">Genus: {fruitData?.genus}</div>
+          <div className="text-xl">Family: {fruitData?.family}</div>
+          <div className="text-xl">Order: {fruitData?.order}</div>
+          <div className="text-xl">Genus: {fruitData?.genus}</div>
           <button
             onClick={() => {
               setModal(true);
