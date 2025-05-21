@@ -17,7 +17,7 @@ export default function SideBar(props) {
       <h1 className="text-4xl font-bold text-sky-600">🌴Juicy Bytes</h1>
       <input
         type="text"
-        className="p-2 border-2 text-lg"
+        className="p-2 border-2 text-2xl"
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
         placeholder="Type Name or Number"
@@ -26,7 +26,7 @@ export default function SideBar(props) {
         return (
           <button
             className={
-              "cursor-pointer text-xl flex border-2 rounded hover:bg-orange-300 hover:text-white transition-colors duration-400 " +
+              "cursor-pointer text-2xl flex border-2 rounded hover:bg-orange-300 hover:text-white transition-colors duration-400 " +
               (selectedFruit === fruits.indexOf(fruit)
                 ? "bg-orange-300 text-white"
                 : "")

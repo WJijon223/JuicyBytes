@@ -80,15 +80,15 @@ export default function FruitCard(props) {
             className="w-64 h-64 object-cover rounded-lg shadow-lg"
           />
         </div>
-        <div className="flex flex-col gap-2 p-3">
-          <div className="text-xl">Family: {fruitData?.family}</div>
-          <div className="text-xl">Order: {fruitData?.order}</div>
-          <div className="text-xl">Genus: {fruitData?.genus}</div>
+        <div className="flex flex-col gap-2 justify-center p-3">
+          <div className="text-2xl">Family: {fruitData?.family}</div>
+          <div className="text-2xl">Order: {fruitData?.order}</div>
+          <div className="text-2xl">Genus: {fruitData?.genus}</div>
           <button
             onClick={() => {
               setModal(true);
             }}
-            className="mx-auto border-2 rounded p-1 hover:bg-amber-50 transition-colors duration-300 cursor-pointer"
+            className="mx-auto text-xl border-2 rounded p-1 hover:bg-amber-50 transition-colors duration-300 cursor-pointer"
           >
             Nutrition Calculator
           </button>
