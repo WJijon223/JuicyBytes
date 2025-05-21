@@ -21,10 +21,10 @@ export default function Modal(props) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-amber-50 p-8 rounded shadow-lg w-96 max-w-full flex flex-col juistify-center items-center rounded-lg"
+        className="bg-amber-50 p-8 rounded shadow-lg w-110 max-w-full flex flex-col juistify-center items-center rounded-lg"
       >
-        <h1 className="text-2xl mb-2">Nutrition Calculator</h1>
-        <div className="flex flex-row justify-center gap-2">
+        <h1 className="text-3xl mb-2">Nutrition Calculator</h1>
+        <div className="flex flex-row text-lg justify-center gap-2">
           <input
             className="border-2 w-2/4"
             type="number"
@@ -40,10 +40,16 @@ export default function Modal(props) {
             Enter
           </button>
         </div>
-        <p>Calories: {((nutritions?.calories / 100) * amount).toFixed(1)}</p>
-        <p>Fat: {((nutritions?.fat / 100) * amount).toFixed(1)} g</p>
-        <p>Sugar: {((nutritions?.sugar / 100) * amount).toFixed(1)} g</p>
-        <p>
+        <p className="text-lg">
+          Calories: {((nutritions?.calories / 100) * amount).toFixed(1)}
+        </p>
+        <p className="text-lg">
+          Fat: {((nutritions?.fat / 100) * amount).toFixed(1)} g
+        </p>
+        <p className="text-lg">
+          Sugar: {((nutritions?.sugar / 100) * amount).toFixed(1)} g
+        </p>
+        <p className="text-lg">
           Carbohydrates:{" "}
           {((nutritions?.carbohydrates / 100) * amount).toFixed(1)} g
         </p>
